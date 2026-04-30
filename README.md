@@ -24,6 +24,4 @@ A sleek, interactive login and registration component built with HTML5 and CSS3.
 
 
 
-##  Installation
-1. Clone the repository:
-   ```bash
+🔗 **Live Demo**: [https://tharun-iitm.github.io/Login-signup-page/](https://tharun-iitm.github.io/Login-signup-page/)
