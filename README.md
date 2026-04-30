@@ -19,8 +19,8 @@ A sleek, interactive login and registration component built with HTML5 and CSS3.
 *   **Google Fonts**: "Poppins" for a modern typographic feel.
 
 ##  Preview
-![Interface Preview](Screenshot 2026-04-30 121604.png)
-![Interface Preview](Screenshot 2026-04-30 121620.png)
+![Interface Preview](Screenshot2026-04-30121604.png)
+![Interface Preview](Screenshot2026-04-30121620.png)
 
 
 
