@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{margin:0;
+padding:0;
+box-sizing: border-box; 
+font-family:"Poppins", sans-serif;
+}
+
+:root {
+    /*--brand-color: #3bcc2e;*/
+    /*  --brand-color: #ff4b2b;*/
+    /*  --brand-color: #2ecc71;*/
+    /*  --brand-color: #27ae60;*/
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    min-height:100vh;
+    background-image: url(abstractbng.jpg);
+    background-size:cover;
+    background-position:center;
+
+}
+
+@keyframes pagePop {
+    0% {
+        opacity: 0;
+        transform: scale(1) translateY(40px);
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+.wrapper{
+    position:relative;
+    overflow: hidden;
+    height: 535px;
+    width:850px; 
+    gap: 20px; 
+   /* background-color: white;*/
+    justify-content: center;
+    backdrop-filter:blur(7px) ;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border: 2px solid rgba(225, 225, 225, 0.2);
+    padding: 30px 40px;
+    border-radius: 10px;
+    animation: pagePop 1s ease-out forwards;
+}
+
+.login, .signup {
+    position: absolute; /* They now sit on top of each other */
+    top: 0;
+    height: 100%;
+    width: 50%;         /* They only take up half the width */
+    transition: all 0.6s ease-in-out;
+    padding: 30px 40px;}
+
+.login{
+    top:12%;
+    left :0;
+    width: 50%;
+    z-index: 2;
+    opacity: 1;
+}
+
+.signup{
+    top:9%;
+    left: 0;
+    width:50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.overlay-box{
+    position:absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    /*background-color: var(--brand-color);*/
+    background: linear-gradient(135deg ,#71b7eb , #f960f9e9);
+    color:#fff;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+
+.overlay-right{
+    position: absolute;
+    opacity: 1;
+    pointer-events: all;
+}
+#login-h{
+    font-size:40px;
+    top :30%;
+    left: 18%;
+}
+#login-p{
+    font-size: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+#login-b{
+    min-width: 100%;
+    height: 40px;
+    border-style: none;
+    border-radius: 30px;
+}
+
+.overlay-left{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+#signin-h{
+    font-size:40px;
+    top :30%;
+    left: 18%;
+}
+#signin-p{
+    font-size: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+#signin-b{
+    position: relative;
+    min-width: 110%;
+    right: 4%;
+    height: 40px;
+    border-style: none;
+    border-radius: 30px;
+}
+
+
+
+.overlay-box button {
+    transition: all 0.2s ease; 
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.487); 
+}
+.overlay-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
+}
+.overlay-box button:active {
+    transform: translateY(2px) scale(0.96); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*for signup page*/
+
+
+.signup{
+ background:transparent;
+ color:#ffffff;
+ border-radius: 10px;
+padding: 30px 40px;
+}
+
+
+.signup  h1{
+    text-align:center;
+    font-size:36px;
+    color:#000
+}
+
+.signup .input{
+ position: relative;
+ width:100%;
+ height:38px;
+ margin:30px 0;}
+
+.signup input{
+    width:100%;
+    height:100%;
+    border: none ;
+    outline:none;
+    border-radius: 40px;
+    background-color: rgba(225, 225, 225, 0.564);
+    border: 2px solid rgba(225, 225, 225, 0.2);    
+    padding: 20px 40px 20px 20px;   /*padding around the placeholder*/
+}
+
+.input input::placeholder{
+    color: rgb(0, 0, 0);
+    font-size:16.5px;
+}
+
+.input i{
+    position:absolute;
+    right:23px;
+    top:38%;
+    color:#000;
+}
+/*------------
+.signup .checkbox{
+    display:flex;
+    justify-content: center;
+    gap:10px;/*scape btw checkbox and words
+    margin: -15px 0px 15px;
+    margin-top:17px;
+    color:white;
+}
+
+.signup .checkbox a{
+    color:white;
+    text-decoration: none;
+}
+
+.signup .checkbox a:hover{
+    color:antiquewhite;
+    text-decoration: underline;
+}
+-----------------------*/
+.signup .checkbox{
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ margin: 15px 0 ;
+ font-size: 14.5px;
+}
+
+.signup .checkbox label {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; 
+    cursor: pointer;
+    gap: 10px;
+}
+
+.checkbox label input {
+    accent-color: #000;
+    margin-right: 8px;
+}
+
+.signup .checkbox a {
+ color: #000;
+ text-decoration:none;
+}
+
+.signup .checkbox p{
+color: #000;
+}
+
+.signup .checkbox a:hover{
+text-decoration:underline;
+transform: translateY(3px);
+}
+
+.signup button{
+ width:100%;
+ height: 45px;
+ background: linear-gradient(135deg, #71b7e6, #f960f9e9);
+ background-color: var(--brand-color);
+ border: none;
+ outline:none;
+ border-radius: 40px;
+ box-shadow : 0 0 10px rgba(0, 0, 0, .1);
+ cursor: pointer;
+ font-size: 16px;
+ color: #fff;
+ font-weight:600;
+}
+
+.signup .hadaccount{
+    display:flex;
+    justify-content: center;
+    margin: 15px 0px 15px;
+    color:#000;
+}
+
+.signup .hadaccount a{
+    color:#000;
+    text-decoration: none;
+}
+
+.signup .hadaccount a:hover{
+    color :#000;
+    text-decoration: underline;
+}
+
+
+
+/*for login page*/
+
+.login{
+ background:transparent;
+ color:#000;
+ border-radius: 10px;
+padding: 30px 40px;
+}
+
+.login h1{
+ font-size: 36px;
+ text-align:center;}
+
+.login .input-box{
+ position: relative;
+ width:100%;
+ height:50px;
+ margin:30px 0;}
+
+.input-box input{
+ width: 100%;
+ height: 100%;
+ background:transparent;
+ background-color: rgba(225, 225, 225, 0.564);
+ border: none;
+ outline: none;
+ border: 2px solid rgba(255 , 255 , 255 , .2);
+ border-radius: 40px;
+ padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+ color:#000;
+ font-size:16.5px;
+}
+
+
+.input-box i{
+ position: absolute;
+ right: 20px;
+ top: 50%;
+ transform: translateY(-50%);
+ font-size: 20px;
+}
+
+.login .remember-forgot{
+ display:flex;
+ justify-content: space-between;
+ margin: -15px 0 15px;
+ font-size: 14.5px;
+}
+
+.remember-forgot label input{
+ accent-color: #ffffff;
+ margin-right: 3px;
+}
+
+.remember-forgot a {
+ color: #000;
+ text-decoration:underline;
+}
+
+.remember-forgot a:hover{
+ transform: scale(1.05);
+ text-decoration:underline;
+}
+
+.register-link a{
+    color:#000;
+}
+
+
+.login .login-btn{
+ width:100%;
+ height: 45px;
+ background: #ffffff ;
+ border: none;
+ outline:none;
+ border-radius: 40px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+ cursor: pointer;
+ font-size: 16px;
+ background: linear-gradient(135deg, #f960f9e9 ,#71b7e6);
+ background-color: var(--brand-color);
+ font-weight:600;
+ color:#fff
+}
+
+.login .register-link{
+ margin-top: 20px;
+ font-size: 14.5px;
+ text-align:center;
+}
+
+.register-link p a{
+color:#ffffff;
+text-decoration:none;
+margin-left:10px;
+}
+
+.login .checkbox label:hover{
+    transform: scale(1.5); /* Slightly grows the whole line */
+    color: antiquewhite;    /* Changes text color slightly to show it's active */
+}
+
+.register-link p a:hover{
+text-decoration:underline;
+}
+
+
+/* 1. The Resting State */
+.login-btn, .signup-btn {
+    transition: all 0.2s ease; /* Makes the pop smooth */
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.421); /* Soft shadow for depth */
+}
+
+/* 2. The "Lift" Effect (When you hover) */
+.login-btn:hover, .signup-btn:hover {
+    transform: translateY(-3px); /* Lifts up slightly */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Shadow expands as it lifts */
+}
+
+/* 3. The "Pop/Push" Effect (The moment you click) */
+.login-btn:active, .signup-btn:active {
+    transform: translateY(2px) scale(0.96); /* Pushes down and shrinks slightly */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow shrinks */
+}
+
+
+
+
+/* This targets all your input boxes */
+.wrapper input {
+    transition: all 0.3s ease; /* Smooth transition for the pop */
+    border: 2px solid transparent; /* Keeps the box from jumping when border appears */
+}
+
+.wrapper input:hover{
+    transform: translateY(-3px); /* Lifts up slightly */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Shadow expands as it lifts */
+
+}
+
+/* The "Pop" effect when clicking/focusing */
+.wrapper input:focus {
+    outline: none; /* Removes the default blue browser outline */
+    transform: scale(1.02); /* Makes the box slightly larger */
+    border-color: var(--brand-color); /* Matches your button color */
+    background-color: #fff; /* Makes it brighten up */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds a soft shadow underneath */
+}
+
+
+.wrapper.active .login{
+    transform: translateX(100%);
+    opacity:0;
+}
+
+.wrapper.active .signup{
+    opacity:1;
+    z-index:5;
+    transform: translateX(100%);
+}
+
+.wrapper.active .overlay-box{
+    transform: translateX(-100%);
+}
+
+.wrapper.active .overlay-right {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper.active .overlay-left {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 15;
+}
+
+.overlay-left, .overlay-right {
+    transition: all 0.6s ease-in-out;
+}
