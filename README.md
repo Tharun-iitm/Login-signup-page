@@ -2,7 +2,7 @@
 
 A sleek, interactive login and registration component built with HTML5 and CSS3. This project focuses on high-quality UI/UX through backdrop filters, smooth transitions, and engaging button physics.
 
-## 🚀 Key Features
+##  Key Features
 *   **Glassmorphism UI**: Uses `backdrop-filter: blur` and semi-transparent borders for a frosted-glass effect.
 *   **Dynamic Overlay**: A smooth sliding transition between Login and Signup states.
 *   **Interactive Animations**: 
@@ -12,16 +12,16 @@ A sleek, interactive login and registration component built with HTML5 and CSS3.
 *   **Responsive Layout**: Centered Flexbox design that adapts to the viewport.
 *   **Icon Integration**: Clean visual cues using Font Awesome.
 
-## 🛠️ Built With
+##  Built With
 *   **HTML5**: Semantic structure.
 *   **CSS3**: Custom animations, Flexbox, and Root variables.
 *   **JavaScript (ES6)**: State management for the sliding overlay.
 *   **Google Fonts**: "Poppins" for a modern typographic feel.
 
-## 📸 Preview
+##  Preview
 ![Interface Preview](abstractbng.jpg) 
 *(Tip: Replace this with a screenshot of your finished project!)*
 
-## 📂 Installation
+##  Installation
 1. Clone the repository:
    ```bash
